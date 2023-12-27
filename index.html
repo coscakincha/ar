@@ -4,9 +4,11 @@
 <!-- we import arjs version without NFT but with marker + location based support -->
 <script src="./aframe-ar-nft.js"></script>
 
-<body style="margin : 0px; overflow: hidden; height: 10px; width: 10px">
+<body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
         <a-marker preset="hiro">
+            <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
+            <!-- <a-text value="BiliBili" color="pink" rotation="-90 0 0"></a-text> -->
             <a-entity position="0 0 0" scale="0.01 0.01 0.01" gltf-model="./house1.gltf"></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
