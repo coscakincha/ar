@@ -11,11 +11,11 @@
             <!-- <a-text value="BiliBili" color="pink" rotation="-90 0 0"></a-text> -->
             <a-entity position="0 0 0" scale="0.01 0.01 0.01" gltf-model="./house1.gltf"></a-entity>
         </a-marker>
-        <a-entity camera zoom="zoom: 2"></a-entity>
+        <a-entity camera zoom="zoom: 0.1"></a-entity>
     </a-scene>
 </body>
 <script>
-        AFRAME.registerComponent('zoom', {
+    AFRAME.registerComponent('zoom', {
     schema: {
         zoom: {type: 'number', default: 1}
     },
