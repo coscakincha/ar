@@ -5,11 +5,11 @@
 <script src="./aframe-ar-nft.js"></script>
 
 <body style="margin : 0px; overflow: hidden; height: 100%; width: 100%;">
-    <a-scene embedded arjs>
+    <a-scene embedded arjs="sourceType: webcam; sourceWidth: 1280; sourceHeight: 720;">
         <a-marker preset="hiro">
             <a-entity position="0 0 0" scale="0.01 0.01 0.01" gltf-model="./house1.gltf"></a-entity>
         </a-marker>
-        <a-entity camera="fov: 30;" look-controls></a-entity>
+        <a-entity camera></a-entity>
     </a-scene>
 </body>
 
