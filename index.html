@@ -3,16 +3,54 @@
 <script src="./aframe.min.js"></script>
 <!-- we import arjs version without NFT but with marker + location based support -->
 <script src="./aframe-ar-nft.js"></script>
+<style>
+    a-scene {
+        width: 600px !important;
+        height: 600px !important;
+    }
 
-<body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded arjs>
-        <a-marker preset="hiro">
-            <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
-            <!-- <a-text value="BiliBili" color="pink" rotation="-90 0 0"></a-text> -->
-            <a-entity position="0 0 0" scale="0.01 0.01 0.01" gltf-model="./house1.gltf"></a-entity>
-        </a-marker>
-        <a-entity camera="zoom: 0.1"></a-entity>
-    </a-scene>
+    .a-canvas {
+        width: 600px !important;
+        height: 600px !important;
+
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <a-scene arjs>
+            <a-marker preset="hiro">
+                <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
+                <!-- <a-text value="BiliBili" color="pink" rotation="-90 0 0"></a-text> -->
+                <a-entity position="0 0 0" scale="0.01 0.01 0.01" gltf-model="./house1.gltf"></a-entity>
+            </a-marker>
+            <a-entity camera="zoom:0.1">
+            </a-entity>
+        </a-scene>
+    </div>
 </body>
+<script>
+/*     var scene = document.querySelector('a-scene');
+    var marker = document.querySelector('a-marker-camera');
+    var entity = document.querySelector('a-entity');
+    var text = document.querySelector('a-text');
+    var camera = document.querySelector('a-entity[camera]');
+    var plane = document.querySelector('a-entity[geometry]');
+    var canvas = document.querySelector('canvas');
+    console.log(canvas);
+    const dpr = window.devicePixelRatio;
+    const { width, height } = this.canvas;
+    // 重新设置 canvas 自身宽高大小和 css 大小。放大 canvas；css 保持不变，因为我们需要那么多的点
+    this.canvas.width = Math.round(width * dpr);
+    this.canvas.height = Math.round(height * dpr);
+    this.canvas.style.width = width + 'px';
+    this.canvas.style.height = height + 'px'; */
+
+</script>
 
 </html>
